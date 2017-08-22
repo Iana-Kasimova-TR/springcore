@@ -23,5 +23,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.3.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="Maven: io.javaslang:javaslang:2.0.6" level="project" />
+    <orderEntry type="library" name="Maven: io.javaslang:javaslang-match:2.0.6" level="project" />
   </component>
 </module>

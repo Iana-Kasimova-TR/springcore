@@ -13,14 +13,16 @@ public class Event {
     private String msg;
     private Date date;
     private DateFormat dateForm;
+    private EventType type;
 
     public String toString() {
        return "id"+this.id+"with date"+this.dateForm.format(this.date)+"message"+this.msg;
     }
 
-        public Event(Date dt, DateFormat df){
+        public Event(Date dt, DateFormat df, EventType tp){
             this.date = dt;
             this.dateForm = df;
+            this.type = tp;
         }
 
 }
