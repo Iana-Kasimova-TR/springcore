@@ -4,6 +4,7 @@ import com.spring.core.beans.Event;
 import lombok.AllArgsConstructor;
 import org.apache.commons.io.FileUtils;
 
+import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 
@@ -23,6 +24,7 @@ public class FileEventLogger implements EventLogger {
         this.fileName = fn;
     }
 
+    @PostConstruct
    public void init() throws IOException{
         this.file = new File(fileName);
    }

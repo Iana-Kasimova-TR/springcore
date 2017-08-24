@@ -8,6 +8,8 @@ import com.spring.core.loggers.CacheFileEventLogger;
 import com.spring.core.loggers.ConsoleEventLogger;
 import com.spring.core.loggers.EventLogger;
 import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,9 +20,13 @@ import static com.spring.core.beans.EventType.ERROR;
 import static com.spring.core.beans.EventType.INFO;
 
 @AllArgsConstructor
+@Data
 public class App {
+    @Autowired
     public Client client;
+    @Autowired
     public EventLogger eventLogger;
+    @Autowired
     public Map<EventType, EventLogger> loggers;
 
     public void logEvent(Event event) throws IOException {

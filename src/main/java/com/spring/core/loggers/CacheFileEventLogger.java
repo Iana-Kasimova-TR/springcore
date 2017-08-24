@@ -3,6 +3,7 @@ package com.spring.core.loggers;
 import com.spring.core.beans.Event;
 import org.apache.commons.io.FileUtils;
 
+import javax.annotation.PreDestroy;
 import java.io.IOException;
 import java.util.*;
 
@@ -28,6 +29,7 @@ public class CacheFileEventLogger extends FileEventLogger {
         }
     }
 
+    @PreDestroy
     public void destroy() throws IOException {
         if(!this.cache.isEmpty()){
             writeEventsFromCache();
