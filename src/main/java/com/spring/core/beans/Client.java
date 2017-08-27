@@ -13,16 +13,13 @@ import org.springframework.stereotype.Component;
 @PropertySource(value={"client.properties"})
 public class Client {
 
-
+      @Value("${id}")
       private String id;
+      @Value("${name}")
       private String fullName;
+      @Value("${greeting}")
       private String greeting;
 
-      @Autowired
-      public Client(@Value("{id}")String id, @Value("{name}")String name, @Value("{greeting}")String greeting){
-            this.id=id;
-            this.fullName=name;
-            this.greeting=greeting;
-      }
+
 
 }

@@ -5,8 +5,8 @@
  		http://www.springframework.org/schema/beans
  		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-<bean id="eventLogger" class="com.spring.core.loggers.ConsoleEventLogger"/>
-<bean id="event" class="com.spring.core.beans.Event" scope="prototype">
+<!--<bean id="eventLogger" class="com.spring.core.loggers.ConsoleEventLogger"/>-->
+<!--<bean id="event" class="com.spring.core.beans.Event" scope="prototype">
 <constructor-arg >
     <bean class="java.util.Date"/>
 </constructor-arg>
@@ -16,11 +16,13 @@
     <constructor-arg type="com.spring.core.beans.EventType">
         <null/>
     </constructor-arg>
-</bean>
+</bean>-->
 
-<bean id="fileEventLogger" class="com.spring.core.loggers.FileEventLogger" init-method="init">
+
+<!--<bean id="fileEventLogger" class="com.spring.core.loggers.FileEventLogger" init-method="init">
 <constructor-arg value="app.txt"/>
-</bean>
+</bean>-->
+
 <bean id="cacheEventLogger" class="com.spring.core.loggers.CacheFileEventLogger"  parent="fileEventLogger" destroy-method="destroy">
 <constructor-arg  value="3"/>
 </bean>
@@ -32,4 +34,5 @@
             </list>
         </constructor-arg>
     </bean>
+
 </beans>

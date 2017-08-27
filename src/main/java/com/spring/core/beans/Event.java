@@ -19,19 +19,17 @@ import java.util.Date;
 public class Event {
     private int id = (int)Math.random();
     private String msg;
+    @Autowired
     private Date date;
+    @Autowired
     private DateFormat dateForm;
+    @Autowired
     private EventType type;
 
     public String toString() {
        return "id"+this.id+"with date"+this.dateForm.format(this.date)+"message"+this.msg;
     }
 
-    @Autowired
-        public Event(Date dt, DateFormat df, @Value("{INFO}") EventType tp){
-            this.date = dt;
-            this.dateForm = df;
-            this.type = tp;
-        }
+
 
 }
